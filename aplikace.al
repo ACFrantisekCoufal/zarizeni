@@ -31,7 +31,7 @@ table 50101 "Zařízení"
             trigger OnValidate()
             begin
                 if Rec."Množství" < 0 then begin
-                    Message('Zadejte kladné číslo');
+                    Message('Zadejte kladné číslo'); //podmínka
                     Rec."Množství" := 0; //přiřazení
                     rec.Modify();
                 end;
